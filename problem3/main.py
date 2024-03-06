@@ -1,7 +1,9 @@
 def array_unique(arrayA, arrayB):
-    # your code here
-    return ''
-
+    set_A = set(arrayA)
+    set_B = set(arrayB)
+    hasil = list(set_A - set_B)
+    hasil.sort()
+    return hasil
 if __name__ == '__main__':
     print(array_unique([1, 2, 3, 4], [1, 3, 5, 10, 16])) # [2, 4]
     print(array_unique([10, 20, 30, 40], [5, 10, 15, 59])) # [20, 30, 40]
